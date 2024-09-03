@@ -1,4 +1,4 @@
-function [outputArg1,outputArg2,outputArg3,outputArg4,outputArg5,outputArg6, outputArg7, outputArg8] = gerarModelo(X1, X2, Y, IC, lower_bounds, upper_bounds)
+function [outputArg1,outputArg2,outputArg3,outputArg4,outputArg5] = gerarModelo(X1, X2, Y, IC, lower_bounds, upper_bounds)
 %   Gera modelo baseado em matrizes de inputs e outputs
 %   Generalização do script do Corotinho, sem elementos de interface
 %   gráfica
@@ -75,6 +75,10 @@ function [outputArg1,outputArg2,outputArg3,outputArg4,outputArg5,outputArg6, out
     % Soma dos quadrados dos resíduos (SSE)
     SSE = sum((Y - Y_pred).^2);
 
+    % Valor de R2 e R2 ajustado
+    R2 = 1 - (SSE / SST);
+    R2_adj = 1 - (SSE / (n - p)) / (SST / (n - 1));
+
     % Graus de liberdade
     df_total = n - 1;
     df_model = p - 1;
@@ -92,12 +96,9 @@ function [outputArg1,outputArg2,outputArg3,outputArg4,outputArg5,outputArg6, out
    
     outputArg1 = optimal_point;
     outputArg2 = optimal_Y;
-    outputArg3 = b;
-    outputArg4 = stderr;
-    outputArg5 = p_values;
-    outputArg6 = t_values;
-    outpputArg7 = SSR;
-    outputArg8 = SST;
+    outputArg3 = [b stderr p_values];
+    outputArg4 = [R2 R2_adj];
+    outputArg5 = [F_value, p_F];
     
 end
 
