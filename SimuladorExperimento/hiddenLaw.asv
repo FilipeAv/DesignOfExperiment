@@ -6,7 +6,7 @@ function [outputArg1, outputArg2, outputArg3] = hiddenLaw(X1, X2, stderr)
 %   dos experimentos
 
 % Função anônima oculta
-y = @(X) 2 + -0.5*(X(:,1)-5) - 0.8*(X(:,2) - 5) + 0.1*(X(:,1) - 5).^2 + 0.1*(X(:,2) - 5).^2 - 0.05*(X(:,1) - 5).*(X(:,2) - 5);
+y = @(X) 2 + -0.5*(X(:,1) - 5) - 0.8*( - 5X(:,2) + 0.1*X(:,1).^2 + 0.1*X(:,2).^2 - 0.05*X(:,1).*X(:,2);
 % Construção da matriz de entradas:
 X = [X1(:) X2(:)];
 

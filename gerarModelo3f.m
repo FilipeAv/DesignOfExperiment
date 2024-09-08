@@ -1,10 +1,16 @@
-function [outputArg1,outputArg2,outputArg3,outputArg4,outputArg5] = gerarModelo(X1, X2, Y, IC, lower_bounds, upper_bounds)
+function [outputArg1,outputArg2,outputArg3,outputArg4,outputArg5, outputArg6] = gerarModelo3f(X1, X2, X3, Y, IC, lower_bounds, upper_bounds)
 %   Gera modelo baseado em matrizes de inputs e outputs
 %   Generalização do script do Corotinho, sem elementos de interface
 %   gráfica
 
+    % Garantir que X1, X2, X3, Y são coluna
+    X1 = X1(:);
+    X2 = X2(:);
+    X3 = X3(:);
+    Y = Y(:);
+
     % Construindo a matriz X (incluindo o termo constante)
-    X = [ones(length(X1), 1), X1, X2, X1.^2, X2.^2, X1.*X2];
+    X = [ones(length(X1), 1), X1, X2, X3, X1.^2, X2.^2, X3.^2, X1.*X2, X1.*X3, X2.*X3];
 
     % Passo 1: Calcular X^T * X
     XtX = X' * X;
@@ -22,13 +28,17 @@ function [outputArg1,outputArg2,outputArg3,outputArg4,outputArg5] = gerarModelo(
     b3 = b(4);
     b4 = b(5);
     b5 = b(6);
+    b6 = b(7);
+    b7 = b(8);
+    b8 = b(9);
+    b9 = b(10);
 
     % Função anônima para o modelo
-    model_func = @(c) b0 + b1*c(1) + b2*c(2) + b3*c(1).^2 + b4*c(2).^2 + b5*c(1).*c(2);
+    model_func = @(c) b0 + b1*c(1) + b2*c(2) + b3*c(3) + b4*c(1).^2 + b5*c(2).^2 + b6*c(3).^2 + b7*c(1).*c(2) + b8*c(1).*c(3) + b9*c(2).*c(3);
 
     % Condições iniciais para a busca (pode ser a média dos valores)
     if isempty(IC)
-        initial_conditions = [mean(X1), mean(X2)];
+        initial_conditions = [mean(X1), mean(X2), mean(X3)];
     else
         initial_conditions = IC;
     end
@@ -99,6 +109,7 @@ function [outputArg1,outputArg2,outputArg3,outputArg4,outputArg5] = gerarModelo(
     outputArg3 = [b stderr p_values];
     outputArg4 = [R2 R2_adj];
     outputArg5 = [F_value, p_F];
+    outputArg6 = residuals;
     
 end
 
