@@ -99,7 +99,7 @@ function [outputArg1,outputArg2,outputArg3,outputArg4,outputArg5, outputArg6] = 
     outputArg3 = [b stderr p_values];
     outputArg4 = [R2 R2_adj];
     outputArg5 = [F_value, p_F];
-    outputArg6 = residuals;
+    outputArg6 = [residuals, Y_pred];
     
 end
 
