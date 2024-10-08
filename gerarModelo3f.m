@@ -1,4 +1,4 @@
-function [outputArg1,outputArg2,outputArg3,outputArg4,outputArg5, outputArg6] = gerarModelo3f(X1, X2, X3, Y, IC, lower_bounds, upper_bounds)
+function [outputArg1,outputArg2,outputArg3,outputArg4,outputArg5, outputArg6] = gerarModelo3f(X1, X2, X3, Y, IC, lower_bounds, upper_bounds, control)
 %   Gera modelo baseado em matrizes de inputs e outputs
 %   Generalização do script do Corotinho, sem elementos de interface
 %   gráfica
