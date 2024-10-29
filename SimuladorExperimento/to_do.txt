@@ -1,6 +1,0 @@
-. Integração completa com excel
-. Overhaul da interface:
-	-> Tela inicial: permite o usuário escolher entre cobrir área 	experimental, andar na superfície de resposta ou modelagem de 	mistura / 1, 2 ou 3 fatores/ quadrático ou linear
-	-> Separar aba de inputs iniciais( X1, X2, Y, condições 	iniciais e limites inferiores e superiores) da de outputs e 	inputs intermediários (superfície, coeficientes do modelo, 	valores estatísticos, minimizar, maximizar, plotar curvas de 	nível, mudar resolução de curvas de nível).
-. Permitir limites customizáveis (para além de quadrados e retângulos)
-. Slider para o número de observações
