@@ -1,4 +1,4 @@
-. CONSERTAR BOTÃO DE MAIOR INCLINAÇÃO (!!!)
+. TERMINAR OVERHAUL PARA 3 FATORES (!!!)
 . MAPA DE CORES PARA 3 FATORES (!!!)
 . Integração completa com excel
 . Overhaul da interface:
