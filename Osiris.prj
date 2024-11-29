@@ -1,0 +1,66 @@
+<deployment-project plugin="plugin.apptool" plugin-version="1.0">
+  <configuration build-checksum="3877998346" file="C:\Users\filip\Documents\GitHub\DesignOfExperiment\Osiris.prj" location="C:\Users\filip\Documents\GitHub\DesignOfExperiment" name="Osiris" target="target.mlapps" target-name="Package App">
+    <param.appname>Osiris</param.appname>
+    <param.authnamewatermark>Filipe Avelino</param.authnamewatermark>
+    <param.email>filipe.oliveira.9055@ga.ita.br</param.email>
+    <param.company>ITA</param.company>
+    <param.icon />
+    <param.icons />
+    <param.summary>Design of Experiments hub for quick experiment planning and lab data treatment.</param.summary>
+    <param.description />
+    <param.screenshot>C:\Users\filip\AppData\Local\Temp\tpcaf784b2_225e_4e0b_8df0_2101e793ec93.png</param.screenshot>
+    <param.version>1.0</param.version>
+    <param.products.name />
+    <param.products.id />
+    <param.products.version />
+    <param.platforms />
+    <param.output>${PROJECT_ROOT}</param.output>
+    <param.guid>54760dcb-2f2e-4382-967f-c34e7d67d3d0</param.guid>
+    <unset>
+      <param.icon />
+      <param.icons />
+      <param.description />
+      <param.version />
+      <param.products.name />
+      <param.products.id />
+      <param.products.version />
+      <param.platforms />
+      <param.output />
+    </unset>
+    <fileset.main>
+      <file>${PROJECT_ROOT}\Osiris.mlapp</file>
+    </fileset.main>
+    <fileset.depfun>
+      <file>${PROJECT_ROOT}\324104.png</file>
+      <file>${PROJECT_ROOT}\testes\penalized_function_max.m</file>
+      <file>${PROJECT_ROOT}\testes\penalized_function_min.m</file>
+      <file>${PROJECT_ROOT}\testes\planejarFCC.m</file>
+      <file>C:\Users\filip\Documents\MATLAB\inpolyhedron\inpolyhedron.m</file>
+    </fileset.depfun>
+    <fileset.resources />
+    <fileset.package />
+    <build-deliverables>
+      <file location="C:\Users\filip\Documents\GitHub" name="DesignOfExperiment" optional="false">C:\Users\filip\Documents\GitHub\DesignOfExperiment</file>
+    </build-deliverables>
+    <workflow />
+    <matlab>
+      <root>C:\Program Files\MATLAB\R2024a</root>
+      <toolboxes />
+    </matlab>
+    <platform>
+      <unix>false</unix>
+      <mac>false</mac>
+      <windows>true</windows>
+      <win2k>false</win2k>
+      <winxp>false</winxp>
+      <vista>false</vista>
+      <linux>false</linux>
+      <solaris>false</solaris>
+      <osver>10.0</osver>
+      <os32>false</os32>
+      <os64>true</os64>
+      <arch>win64</arch>
+      <matlab>true</matlab>
+    </platform>
+  </configuration>
+</deployment-project>
