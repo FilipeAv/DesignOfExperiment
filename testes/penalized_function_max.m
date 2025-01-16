@@ -1,5 +1,6 @@
 % Função Penalizada
 function val = penalized_function_max(x, f, vertices)
+
     % Verifica se o ponto está dentro do polígono
     if inpolygon(x(1), x(2), vertices(:, 1), vertices(:, 2))
         val = f(x); % Avalia a função
